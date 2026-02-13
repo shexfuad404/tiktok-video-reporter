@@ -1,13 +1,13 @@
 import http.client
 import json, random
 
-7340360024598464046 = input("Please put the video ID: ")
+video_id = input("Please put the video ID: ")
 
 conn = http.client.HTTPSConnection("www.tiktok.com")
 payload = json.dumps({
   "reason": 1004,
-  "object_id": 7340360024598464046,
-  "owner_id": 7340360024598464046,
+  "object_id": video_id,
+  "owner_id": video_id,
   "report_type": "video"
 })
 
@@ -1224,7 +1224,7 @@ headers = {
   'Sec-Fetch-Dest': 'empty',
   'Sec-Fetch-Mode': 'cors',
   'Sec-Fetch-Site': 'same-origin',
-  'Referer': f'https://www.tiktok.com/foryou?is_copy_url=1&is_from_webapp=v1&item_id={videoID}',
+  'Referer': f'https://www.tiktok.com/foryou?is_copy_url=1&is_from_webapp=v1&item_id={video_id}',
   'Connection': 'keep-alive',
   'TE': 'trailers'
 }
